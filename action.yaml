@@ -1,5 +1,8 @@
 name: Check for changes since the last success
 description: Check if there are changes since the last successful commit in specified paths.
+branding:
+  icon: git-commit
+  color: green
 
 inputs:
   github-token:
