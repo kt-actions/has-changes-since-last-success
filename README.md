@@ -28,7 +28,7 @@ Usage:
   if: steps.check-changes.outputs.has-changes == 'true'
 ```
 
-- https://github.com/kt-npm-modules/npm-typescript-template/blob/main/.github/workflows/ci.yml#L25
+- https://github.com/kt-npm-modules/npm-typescript-template/blob/main/.github/workflows/ci.yml#L74
 
 Additional considerations:
 
