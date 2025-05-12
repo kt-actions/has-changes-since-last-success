@@ -14,7 +14,19 @@ Outputs:
 - `success-commit`: Last successfull commit SHA
 - `has-changes`: Specifies if there were changes (`true`) since last successfull commit in the specified path. If no successfull commits are found (e.g. first run, or fetch-depth is not enough, or `gh run list` does not list all runs, etc.), will be set to `true`
 
-Examples:
+Usage:
+
+```yml
+- id: check-changes
+  uses: kt-actions/has-changes-since-last-success@v1
+  with:
+    paths: |
+      subpackage
+      .githooks
+
+- uses: actions/checkout@v4
+  if: steps.check-changes.outputs.has-changes == 'true'
+```
 
 - https://github.com/kt-npm-modules/npm-typescript-template/blob/main/.github/workflows/ci.yml#L25
 
