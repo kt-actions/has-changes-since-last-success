@@ -2,7 +2,7 @@
 
 Action to determine if there are changes in the provided paths since the last successful workflow run. Supports only `push` and `pull_request` events.
 
-Inputs
+Inputs:
 
 - `github-token`: GitHub token to checkout repo with, defaults to `github.token`
 - `paths`: Paths to check for changes in, can be specified as signle line `>-` or multiline `|`; `.github` is always included unless `no-dot-github` is set to `true`
