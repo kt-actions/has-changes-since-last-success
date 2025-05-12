@@ -1,0 +1,27 @@
+name: Template
+description: 'Template for creating new actions'
+
+inputs:
+  name:
+    description: 'Your name'
+    required: true
+    default: 'World'
+
+outputs:
+  greeting:
+    description: 'The greeting message'
+    value: ${{ steps.hello.outputs.message }}
+
+runs:
+  using: 'composite'
+  steps:
+    - id: echo
+      run: ${{ tojson(inputs) }}
+      shell: cat {0}
+
+    - run: echo "message='Hello ${{ inputs.name }}'" >> "$GITHUB_OUTPUT"
+      shell: bash
+      id: hello
+
+    - run: echo "Hello ${{ steps.hello.outputs.message }}"
+      shell: bash
