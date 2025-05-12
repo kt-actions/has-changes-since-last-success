@@ -7,7 +7,7 @@ Inputs:
 - `github-token`: GitHub token to checkout repo with, defaults to `github.token`
 - `paths`: Paths to check for changes in, can be specified as signle line `>-` or multiline `|`; `.github` is always included unless `no-dot-github` is set to `true`
 - `no-dot-github`: Set to `true` if `.github` folder should not be automatically included and only specified `paths` should be checked
-- `fetch-depth`: Fetch depth for checkint out the repo, default `20`
+- `fetch-depth`: Fetch depth for checking out the repo, default `20`
 
 Outputs:
 
