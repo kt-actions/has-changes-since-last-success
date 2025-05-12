@@ -1,6 +1,6 @@
 # has-changes-since-last-success
 
-Action to determine if there are changes in the provided paths since the last successful current workflow run. Supports only `push` and `pull_request` events.
+Action to determine if there are changes in the provided paths since the last successful run of the current workflow. Supports only `push` and `pull_request` events. Can be useful for monorepos with long running check/test jobs.
 
 Inputs:
 
